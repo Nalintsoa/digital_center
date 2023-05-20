@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>API</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <h2>LISTE <span id="item-count"></span></h2>
+    Filtre : 
+    <input type="text" placeholder="postID" id="ṕost-filter">
+    <input type="text" placeholder="ID" id="id-filter">
+    <br><br>
+    <table style="border-color: aliceblue;width: 100%; margin-right: 5;">
+        <thead>
+            <tr style="background-color: aliceblue;">
+                <th>postID</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Body</th>
+            </tr>
+        </thead>
+        <tbody id="corps"></tbody>
+    </table>
+    <script src='fetching.js'></script>
+</body>
+</html>
