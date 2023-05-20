@@ -9,20 +9,17 @@ const getData = async (postFilter, IDFilter) => {
                 filteredData = data;
             } else 
             if(!postFilter && !!IDFilter){
-                // filteredData = data.filter(item => item.id === IDFilter);
                 filteredData = data.filter(item => {
                     idString = item.id.toString();
                     return idString.startsWith(IDFilter.toString());
                 })
             } else if(!IDFilter && !!postFilter){
-                // filteredData = data.filter(item => item.postId === postFilter);
                 filteredData = data.filter(item => {
                     postidString = item.postId.toString();
                     return postidString.startsWith(postFilter.toString());
                 })
             }
             else {
-                // filteredData = data.filter(item => item.postId === postFilter && item.id === IDFilter);
                 filteredData = data.filter(item => {
                     postidString = item.postId.toString();
                     idString = item.id.toString();
@@ -49,7 +46,6 @@ const getData = async (postFilter, IDFilter) => {
                 });
                 tableData += "</tbody>";
             }
-            // const textNode = document.createElement(tableData);
             document.getElementById('corps').innerHTML = tableData;
             
         }
